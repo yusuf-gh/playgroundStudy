@@ -6,8 +6,17 @@ __pycache__/
 # C extensions
 *.so
 
+# Top Secrets
+.env
+
+# Scratchpad kind files are here
+scratch/*
+!scratch/.gitkeep
+
+
 # Distribution / packaging
 .Python
+.idea/
 build/
 develop-eggs/
 dist/
