@@ -18,6 +18,7 @@
 - `version` — shows the Docker client and server versions.
 
 ### 📦 Container Management
+- `start -ai <container name>` — *flags* `attach` + `interactive` to start a container in interactive mode and attach it to current terminal window
 - `ps` — lists all currently *running* containers.
 - `ps -a` — lists *all* containers (both running and stopped).
 - `run <image_name>` — pulls the image (if not found locally) and starts a new container.
