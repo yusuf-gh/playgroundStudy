@@ -1,9 +1,14 @@
 services:
+
+  php:
+    image: my-running-php-app
+    ports:
+      - 8081:80
   db:
-    image: mariadb:10.11
+    image: mysql
     restart: always
     environment:
-      MY_SQL_PASSWORD: 12345
+      MYSQL_ROOT_PASSWORD: 12345
 
   phpmyadmin:
     image: phpmyadmin
@@ -11,4 +16,4 @@ services:
     ports:
       - 8080:80
     environment:
-      - PMA_ARBITRARY = 1
+      - PMA_ARBITRARY=1
