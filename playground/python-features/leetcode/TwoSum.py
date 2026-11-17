@@ -1,9 +1,17 @@
 
+class Solution:
+    def twosum(self, nums: list[int], target: int) -> list[int]:
+        hashMap: dict[int, int] = {}
 
-def twosum(nums, target):
-    for index1 in range(len(nums)):
-        for index2 in range(len(nums)):
-            if nums[index1] + nums[index2] == target and index1 != index2:
-                return [index1, index2]
+        for i in range(len(nums)):
+            cur: int = nums[i]
+            # объявляю значение индекса i
+            # cur + x = target
+            # x = target - cur
+            x: int = target - cur
+            if x in hashMap:
+                return [hashMap.get(x), i]
+            # если условие не соблюдено создаем запись
+            hashMap[cur] = i
 
-    return []
+        return []
