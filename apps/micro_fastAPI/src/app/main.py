@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(title="My Async Service")
 
-@app.get("/ping")
-def pong():
-    return {"ping": "pong!"}
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
 

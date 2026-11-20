@@ -17,6 +17,7 @@ scratch/*
 # Distribution / packaging
 .Python
 venv/
+.venv/
 .idea/
 build/
 develop-eggs/
