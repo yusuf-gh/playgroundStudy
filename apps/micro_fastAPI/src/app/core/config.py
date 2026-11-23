@@ -3,7 +3,6 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 # этот класс умеет сам искать значения полей в системных переменных
 # окружения ОС и .env файлах.
 
-
 class Settings(BaseSettings):
     DATABASE_URL: str
 
